@@ -1,0 +1,251 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans)}
+.brand-purple{color:#6B5CE7}
+.bg-purple-soft{background:#F4F2FF}
+.bg-purple-muted{background:#E8E4FF}
+.accent{background:#6B5CE7;color:#fff}
+.accent-outline{border:1.5px solid #6B5CE7;color:#6B5CE7;background:transparent}
+.tag{display:inline-block;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px}
+.tag-best{background:#E8E4FF;color:#4A3DB5}
+.tag-new{background:#E1F5EE;color:#085041}
+.tag-top{background:#FAEEDA;color:#633806}
+.tag-limited{background:#FBEAF0;color:#72243E}
+.badge-verify{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:#085041;background:#E1F5EE;padding:2px 8px;border-radius:20px}
+.stars{color:#BA7517;font-size:13px}
+.strike{text-decoration:line-through;color:var(--color-text-tertiary);font-size:13px}
+.save-badge{background:#E24B4A;color:#fff;font-size:10px;font-weight:500;padding:2px 6px;border-radius:4px}
+.trust-icon{width:36px;height:36px;border-radius:50%;background:#F4F2FF;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;font-size:16px}
+.section-label{font-size:11px;letter-spacing:.08em;color:var(--color-text-tertiary);text-transform:uppercase;margin-bottom:6px}
+.concern-pill{padding:8px 16px;border-radius:20px;border:0.5px solid var(--color-border-secondary);font-size:13px;cursor:pointer;background:var(--color-background-primary);color:var(--color-text-primary);display:inline-block}
+.concern-pill:hover{background:#F4F2FF;border-color:#6B5CE7;color:#4A3DB5}
+.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden}
+.card-img{width:100%;aspect-ratio:1/1;background:var(--color-background-secondary);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.card-img-label{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--color-text-tertiary)}
+.broken-img{background:#FFF0F0;border:1px dashed #E24B4A}
+.broken-txt{color:#A32D2D;font-size:11px;font-weight:500}
+.quick-add{width:100%;padding:8px;background:#6B5CE7;color:#fff;border:none;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer;margin-top:10px}
+.quick-add:hover{background:#4A3DB5}
+.footer-col h4{font-size:13px;font-weight:500;margin-bottom:10px;color:var(--color-text-primary)}
+.footer-col a{display:block;font-size:12px;color:var(--color-text-secondary);margin-bottom:6px;text-decoration:none}
+.footer-col a:hover{color:#6B5CE7}
+.secure-icon{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--color-text-tertiary);border:0.5px solid var(--color-border-tertiary);border-radius:4px;padding:3px 8px}
+</style>
+
+<div style="max-width:480px;margin:0 auto;font-size:14px;color:var(--color-text-primary)">
+
+  <div style="background:#6B5CE7;color:#fff;text-align:center;padding:8px;font-size:12px">
+    Free shipping over $50 &nbsp;|&nbsp; 30-day money-back guarantee
+  </div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:0.5px solid var(--color-border-tertiary);position:sticky;top:0;background:var(--color-background-primary);z-index:10">
+    <span style="font-weight:500;font-size:15px">Lumora Skin</span>
+    <div style="display:flex;gap:16px;align-items:center">
+      <span style="font-size:13px;color:var(--color-text-secondary);cursor:pointer">Collections</span>
+      <span style="font-size:13px;color:var(--color-text-secondary);cursor:pointer">Shipping</span>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="color:var(--color-text-secondary)"><circle cx="6.5" cy="6.5" r="4" stroke="currentColor" stroke-width="1.2"/><line x1="9.5" y1="9.5" x2="13" y2="13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="color:var(--color-text-secondary)"><path d="M13 11H3L2 4h12l-1 7z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><circle cx="6" cy="13.5" r="1" fill="currentColor"/><circle cx="10" cy="13.5" r="1" fill="currentColor"/></svg>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:280px;background:#F9F8FF;padding:24px 16px">
+    <div style="display:flex;flex-direction:column;justify-content:center;gap:10px">
+      <p class="section-label">Clinically inspired</p>
+      <h1 style="font-size:22px;font-weight:500;line-height:1.3;color:var(--color-text-primary)">Clear skin starts here</h1>
+      <p style="font-size:13px;color:var(--color-text-secondary);line-height:1.6">Formulas for sensitive, acne-prone skin.</p>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px">
+        <button class="accent" style="padding:10px 16px;border:none;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer" onclick="sendPrompt('What are the best sellers on Lumora Skin?')">Shop best sellers</button>
+        <button class="accent-outline" style="padding:9px 16px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer">Take skin quiz</button>
+      </div>
+      <p style="font-size:11px;color:var(--color-text-tertiary);margin-top:4px">Trusted by 12,000+ customers &nbsp;★★★★★</p>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center">
+      <div style="width:140px;height:160px;background:#E8E4FF;border-radius:16px;display:flex;align-items:center;justify-content:center;border:0.5px solid #C8C2F0">
+        <span style="font-size:11px;color:#6B5CE7;font-weight:500;text-align:center;padding:8px">Product<br>image here</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-around;padding:14px 16px;border-bottom:0.5px solid var(--color-border-tertiary);border-top:0.5px solid var(--color-border-tertiary);background:var(--color-background-primary)">
+    <div style="text-align:center;font-size:11px;color:var(--color-text-secondary)">
+      <div style="font-size:14px;margin-bottom:2px">🌿</div>Cruelty free
+    </div>
+    <div style="text-align:center;font-size:11px;color:var(--color-text-secondary)">
+      <div style="font-size:14px;margin-bottom:2px">🔬</div>Dermatologist inspired
+    </div>
+    <div style="text-align:center;font-size:11px;color:var(--color-text-secondary)">
+      <div style="font-size:14px;margin-bottom:2px">✓</div>Paraben free
+    </div>
+    <div style="text-align:center;font-size:11px;color:var(--color-text-secondary)">
+      <div style="font-size:14px;margin-bottom:2px">↩</div>30-day guarantee
+    </div>
+  </div>
+
+  <div style="padding:20px 16px">
+    <p class="section-label">Best sellers</p>
+    <h2 style="font-size:17px;font-weight:500;margin-bottom:14px">Top rated by you</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+
+      <div class="card">
+        <div class="card-img" style="background:#F0EEFF">
+          <span style="font-size:11px;color:#6B5CE7;font-weight:500">Product image</span>
+          <div style="position:absolute;top:8px;left:8px"><span class="tag tag-best">Best seller</span></div>
+          <div style="position:absolute;top:8px;right:8px"><span class="save-badge">25% off</span></div>
+        </div>
+        <div style="padding:10px">
+          <p style="font-weight:500;font-size:13px;margin-bottom:4px">Glow balance cleanser</p>
+          <div class="stars">★★★★★ <span style="color:var(--color-text-tertiary);font-size:11px">4.8 (182)</span></div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin:6px 0">
+            <span style="font-weight:500">$24.00</span>
+            <span class="strike">$32.00</span>
+          </div>
+          <button class="quick-add">Quick add</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background:#E8F4FF">
+          <span style="font-size:11px;color:#185FA5;font-weight:500">Product image</span>
+          <div style="position:absolute;top:8px;left:8px"><span class="tag tag-new">New</span></div>
+          <div style="position:absolute;top:8px;right:8px"><span class="save-badge">24% off</span></div>
+        </div>
+        <div style="padding:10px">
+          <p style="font-weight:500;font-size:13px;margin-bottom:4px">Radiance C serum</p>
+          <div class="stars">★★★★★ <span style="color:var(--color-text-tertiary);font-size:11px">4.7 (139)</span></div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin:6px 0">
+            <span style="font-weight:500">$34.00</span>
+            <span class="strike">$45.00</span>
+          </div>
+          <button class="quick-add">Quick add</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img broken-img">
+          <div style="text-align:center">
+            <div style="font-size:20px;margin-bottom:4px">⚠</div>
+            <p class="broken-txt">Image broken — fix immediately</p>
+          </div>
+          <div style="position:absolute;top:8px;left:8px"><span class="tag tag-top">Top rated</span></div>
+        </div>
+        <div style="padding:10px">
+          <p style="font-weight:500;font-size:13px;margin-bottom:4px">Barrier repair cream</p>
+          <div class="stars">★★★★★ <span style="color:var(--color-text-tertiary);font-size:11px">4.9 (214)</span></div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin:6px 0">
+            <span style="font-weight:500">$29.00</span>
+            <span class="strike">$38.00</span>
+          </div>
+          <button class="quick-add">Quick add</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background:#F5F0E8">
+          <span style="font-size:11px;color:#633806;font-weight:500">Product image</span>
+          <div style="position:absolute;top:8px;left:8px"><span class="tag tag-limited">Limited</span></div>
+          <div style="position:absolute;top:8px;right:8px"><span style="font-size:10px;color:#A32D2D;font-weight:500">Only 4 left</span></div>
+        </div>
+        <div style="padding:10px">
+          <p style="font-weight:500;font-size:13px;margin-bottom:4px">Night renew elixir</p>
+          <div class="stars">★★★★★ <span style="color:var(--color-text-tertiary);font-size:11px">4.6 (98)</span></div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin:6px 0">
+            <span style="font-weight:500">$38.00</span>
+            <span class="strike">$48.00</span>
+          </div>
+          <button class="quick-add">Quick add</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="padding:20px 16px;background:#F9F8FF;border-radius:12px;margin:0 16px 20px">
+    <p class="section-label">Shop by concern</p>
+    <h2 style="font-size:17px;font-weight:500;margin-bottom:14px">What does your skin need?</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <span class="concern-pill" onclick="sendPrompt('Show me products for acne on Lumora Skin')">Acne</span>
+      <span class="concern-pill">Dryness</span>
+      <span class="concern-pill">Redness</span>
+      <span class="concern-pill">Glow</span>
+      <span class="concern-pill">Barrier repair</span>
+    </div>
+  </div>
+
+  <div style="padding:20px 16px;border-top:0.5px solid var(--color-border-tertiary)">
+    <p class="section-label">Testimonials</p>
+    <h2 style="font-size:17px;font-weight:500;margin-bottom:14px">Real results</h2>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="card" style="padding:14px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+          <div style="display:flex;align-items:center;gap:8px">
+            <div style="width:32px;height:32px;border-radius:50%;background:#E8E4FF;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:#4A3DB5">AN</div>
+            <div>
+              <p style="font-size:13px;font-weight:500">Ava N.</p>
+              <p style="font-size:11px;color:var(--color-text-tertiary)">Glow Balance Cleanser</p>
+            </div>
+          </div>
+          <span class="badge-verify">✓ Verified</span>
+        </div>
+        <div class="stars" style="margin-bottom:6px">★★★★★</div>
+        <p style="font-size:13px;color:var(--color-text-secondary);line-height:1.5">My skin has completely calmed down. No more redness and the texture is so much smoother.</p>
+      </div>
+      <div class="card" style="padding:14px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+          <div style="display:flex;align-items:center;gap:8px">
+            <div style="width:32px;height:32px;border-radius:50%;background:#E1F5EE;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:#085041">MK</div>
+            <div>
+              <p style="font-size:13px;font-weight:500">Maya K.</p>
+              <p style="font-size:11px;color:var(--color-text-tertiary)">Radiance C Serum</p>
+            </div>
+          </div>
+          <span class="badge-verify">✓ Verified</span>
+        </div>
+        <div class="stars" style="margin-bottom:6px">★★★★★</div>
+        <p style="font-size:13px;color:var(--color-text-secondary);line-height:1.5">Genuinely noticed a glow difference in week two. Worth every penny.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:20px 16px;background:#F4F2FF;margin-top:4px">
+    <p class="section-label">Skin quiz</p>
+    <h2 style="font-size:17px;font-weight:500;margin-bottom:6px">Not sure where to start?</h2>
+    <p style="font-size:13px;color:var(--color-text-secondary);margin-bottom:14px">Take 30 seconds and we'll build your personalised routine.</p>
+    <button class="accent" style="padding:11px 20px;border:none;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;width:100%" onclick="sendPrompt('How should the Lumora Skin quiz flow work?')">Build my personalised routine ↗</button>
+  </div>
+
+  <div style="padding:20px 16px;border-top:0.5px solid var(--color-border-tertiary)">
+    <h2 style="font-size:15px;font-weight:500;margin-bottom:6px">Get 10% off + free skin guide</h2>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin-bottom:12px">Join 12,000+ with calmer skin. Unsubscribe anytime.</p>
+    <div style="display:flex;gap:8px">
+      <input type="email" placeholder="Your email" style="flex:1;padding:9px 12px;border:0.5px solid var(--color-border-secondary);border-radius:8px;font-size:13px;background:var(--color-background-primary);color:var(--color-text-primary)"/>
+      <button class="accent" style="padding:9px 14px;border:none;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap">Claim 10%</button>
+    </div>
+  </div>
+
+  <div style="padding:20px 16px;background:var(--color-background-secondary);border-top:0.5px solid var(--color-border-tertiary)">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+      <div class="footer-col">
+        <h4>Help</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Shipping & returns</a>
+        <a href="#">Contact us</a>
+        <a href="#">Track order</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About us</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of service</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;padding-top:12px;border-top:0.5px solid var(--color-border-tertiary)">
+      <span class="secure-icon">🔒 Secure checkout</span>
+      <span class="secure-icon">↩ Easy returns</span>
+      <span class="secure-icon">🚚 Fast dispatch</span>
+    </div>
+    <p style="font-size:11px;color:var(--color-text-tertiary);margin-top:12px">© 2025 Lumora Skin. All rights reserved.</p>
+  </div>
+
+</div>

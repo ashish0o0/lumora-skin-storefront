@@ -1,0 +1,19 @@
+Here's a breakdown of every change made and why, organised by priority:
+Fixed immediately (critical)
+The Barrier Repair Cream broken image is flagged in red directly on the card — nothing kills trust faster. Replace that image URL in Shopify before anything else. Also replaced all "View" buttons with "Quick add" — "View" feels passive and doesn't drive purchases.
+Hero section (biggest impact)
+Split into a two-column layout: headline + CTAs on the left, product image placeholder on the right. Added a secondary "Take skin quiz" button, social proof ("Trusted by 12,000+ customers"), and a section label ("Clinically inspired") to set the premium tone before the headline hits.
+Header
+Added a search icon and cart icon. The announcement bar ("Free shipping over $50") is now a separate slim purple strip above the header, so the header itself stays clean. The sticky behaviour is set via CSS.
+Product cards
+Each card now has a discount badge (% off), a scarcity label where relevant ("Only 4 left"), and a visible "Quick add" button. The review star count is more prominent.
+Replaced duplicate Best Sellers with "Shop by concern"
+The store showed Featured Collection and then Best Sellers showing the exact same products. One section was replaced with clickable concern pills (Acne, Dryness, Redness, Glow, Barrier Repair) — this increases purchase intent because customers self-select rather than scroll past things that don't apply to them.
+Testimonials upgraded
+Added customer initials avatar, verified buyer badge, and the product name each reviewer bought — this specificity makes testimonials feel credible rather than generic.
+Newsletter
+Combined email + button inline and changed the headline to "Get 10% off + free skin guide" — the added value (the guide) makes the signup feel worth it.
+Footer
+Added proper columns (Help, Company), Instagram, FAQ, Returns, and secure checkout trust icons at the bottom.
+Brand color
+Applied the soft purple (#6B5CE7) consistently to CTAs, announcement bar, and accents — replacing the flat gray monotone while keeping it elegant, not loud.
