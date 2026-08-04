@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lumora Skin | Clean Skincare Store</title>
+    <title>Lumora Skin | Clinical Apothecary Skincare</title>
     <meta
       name="description"
-      content="Lumora Skin is a modern skincare brand focused on glow, barrier repair, and confidence."
+      content="Lumora Skin is a minimalist skincare brand focused on barrier repair, hydration, and visible glow for sensitive skin."
     />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
@@ -15,12 +15,23 @@
     <header class="site-header">
       <nav class="container nav">
         <a class="logo" href="index.html">Lumora Skin</a>
+        <button class="hamburger" data-hamburger aria-label="Toggle menu">☰</button>
         <div class="menu">
           <a href="catalog.html">Catalog</a>
+          <a href="about.html">About</a>
           <a href="shipping.html">Shipping</a>
-          <a class="icon-link" href="catalog.html" aria-label="Search">⌕</a>
-          <a class="icon-link" href="contact.html" aria-label="Account">◌</a>
-          <a href="cart.html">Cart: <b data-cart-count>0</b></a>
+          <a class="nav-icon-link" href="catalog.html" aria-label="Search Catalog">
+            <svg class="icon-ui" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Search
+          </a>
+          <a class="nav-icon-link" href="contact.html" aria-label="Skin Consultation">
+            <svg class="icon-ui" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Consult
+          </a>
+          <a class="nav-icon-link" href="cart.html" aria-label="View Cart" style="white-space:nowrap">
+            <svg class="icon-ui" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Cart (<span data-cart-count class="font-mono">0</span>)
+          </a>
         </div>
       </nav>
     </header>
@@ -29,22 +40,24 @@
       <section class="hero">
         <div class="container hero-layout">
           <div>
-            <p class="hero-kicker">Clinically inspired</p>
+            <p class="hero-kicker">Clinically Inspired Skincare</p>
             <h1>Clear skin starts here.</h1>
             <p>
-              Clinically inspired formulas for sensitive, acne-prone skin. Build a routine that
-              supports hydration, barrier repair, and visible glow.
+              Targeted clinical formulas for sensitive, reactive, and acne-prone skin. Build a barrier-first routine that supports lasting hydration and natural glow.
             </p>
             <div class="hero-cta">
-              <a class="btn btn-dark" href="catalog.html">Shop Best Sellers</a>
-              <a class="btn btn-outline" href="contact.html">Take Skin Quiz</a>
+              <a class="btn btn-primary" href="catalog.html">Shop Best Sellers</a>
+              <button class="btn btn-secondary" data-open-quiz>Take Skin Quiz</button>
             </div>
-            <p class="hero-proof">Trusted by 12,000+ customers ★★★★★</p>
+            <p class="hero-proof">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--primary)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Trusted by 12,000+ sensitive-skin customers
+            </p>
           </div>
           <div class="hero-visual">
             <img
-              src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=900&q=80"
-              alt="Lumora featured skincare products"
+              src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80"
+              alt="Lumora clinical skincare dropper"
             />
           </div>
         </div>
@@ -52,79 +65,101 @@
 
       <section class="section">
         <div class="container">
-          <h2>Featured Collection</h2>
+          <div class="section-header">
+            <h2>Featured Clinical Formulas</h2>
+            <p>Formulated with proven active percentages and zero harsh irritants.</p>
+          </div>
           <div class="grid grid-3 product-carousel" data-featured-products></div>
         </div>
       </section>
 
+      <!-- Merged Clinical Standard Section (Unified Claims + Icons) -->
       <section class="section">
-        <div class="container trust-icons">
-          <article class="card"><div class="icon">🌿</div><p>Cruelty free</p></article>
-          <article class="card"><div class="icon">🔬</div><p>Dermatologist inspired</p></article>
-          <article class="card"><div class="icon">✓</div><p>Paraben free</p></article>
-          <article class="card"><div class="icon">↩</div><p>30-day guarantee</p></article>
+        <div class="container">
+          <div class="section-header" style="text-align:center">
+            <h2>The Lumora Clinical Standard</h2>
+            <p>Every formula adheres to our strict apothecary testing principles.</p>
+          </div>
+          <div class="clinical-claims-grid">
+            <article class="claim-card">
+              <div class="claim-icon-wrap">
+                <svg class="icon-badge" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3>Dermatologist Inspired</h3>
+              <p>Formulated with proven active percentages and skin-first ingredients.</p>
+            </article>
+            <article class="claim-card">
+              <div class="claim-icon-wrap">
+                <svg class="icon-badge" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <h3>Cruelty &amp; Paraben Free</h3>
+              <p>100% vegan, fragrance-light, and non-stripping for reactive barriers.</p>
+            </article>
+            <article class="claim-card">
+              <div class="claim-icon-wrap">
+                <svg class="icon-badge" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h3>30-Day Guarantee</h3>
+              <p>Love your formula in 30 days or enjoy effortless return processing.</p>
+            </article>
+            <article class="claim-card">
+              <div class="claim-icon-wrap">
+                <svg class="icon-badge" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </div>
+              <h3>Fast Dispatch</h3>
+              <p>Dispatched within 1 business day with climate-neutral eco shipping.</p>
+            </article>
+          </div>
         </div>
       </section>
 
       <section class="section">
         <div class="container card urgency">
-          <h2>Weekend Skin Reset Offer</h2>
-          <p>Bundle any 2 serums and get 15% off. Offer ends in:</p>
-          <p class="timer" data-offer-timer>23:59:59</p>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container grid grid-3">
-          <article class="card">
-            <h3>Clinically inspired formulas</h3>
-            <p>Every product is crafted with proven active ingredients and a skin-first approach.</p>
-          </article>
-          <article class="card">
-            <h3>No harsh ingredients</h3>
-            <p>Fragrance-light, non-stripping, and made for sensitive skin concerns.</p>
-          </article>
-          <article class="card">
-            <h3>30-day confidence guarantee</h3>
-            <p>If it is not right for your skin, we make returns easy.</p>
-          </article>
+          <h2>Weekend Skin Reset Bundle</h2>
+          <p>Bundle any 2 serums and receive 15% off automatically. Offer ends in:</p>
+          <p class="timer font-mono" data-offer-timer>23:59:59</p>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
-          <h2>Shop by Concern</h2>
+          <div class="section-header">
+            <h2>Shop by Skin Concern</h2>
+            <p>Select your primary skin focus to filter targeted formulas.</p>
+          </div>
           <div class="concerns">
-            <span class="concern-pill">Acne</span>
-            <span class="concern-pill">Dryness</span>
-            <span class="concern-pill">Redness</span>
-            <span class="concern-pill">Glow</span>
-            <span class="concern-pill">Barrier repair</span>
+            <a class="concern-pill" href="catalog.html?concern=acne">Acne &amp; Blemishes</a>
+            <a class="concern-pill" href="catalog.html?concern=dryness">Dryness &amp; Tightness</a>
+            <a class="concern-pill" href="catalog.html?concern=redness">Redness &amp; Reactivity</a>
+            <a class="concern-pill" href="catalog.html?concern=glow">Dullness &amp; Glow</a>
+            <a class="concern-pill" href="catalog.html?concern=barrier-repair">Barrier Repair</a>
           </div>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
-          <h2>Real Results</h2>
+          <div class="section-header">
+            <h2>Verified Patient &amp; Customer Results</h2>
+          </div>
           <div class="grid grid-3 testimonial-carousel">
-            <article class="card">
+            <article class="card testimonial-card">
               <div class="testimonial-meta"><strong>Ava N.</strong><span class="verified">Verified buyer</span></div>
-              <p class="small">Glow Balance Cleanser</p>
-              <p>★★★★★</p>
-              <p>"My skin texture improved in just two weeks. Super clean feel."</p>
+              <p class="small" style="margin:0">Glow Balance Cleanser</p>
+              <p class="rating" style="margin:0">★★★★★</p>
+              <p style="margin:0">"My skin texture improved visibly in just two weeks. Super clean, non-stripping feel."</p>
             </article>
-            <article class="card">
+            <article class="card testimonial-card">
               <div class="testimonial-meta"><strong>Riya S.</strong><span class="verified">Verified buyer</span></div>
-              <p class="small">Radiance C Serum</p>
-              <p>★★★★★</p>
-              <p>"No irritation, only glow. This serum is now my daily staple."</p>
+              <p class="small" style="margin:0">Radiance C Serum</p>
+              <p class="rating" style="margin:0">★★★★★</p>
+              <p style="margin:0">"No irritation, only natural radiance. This serum is now my essential morning staple."</p>
             </article>
-            <article class="card">
+            <article class="card testimonial-card">
               <div class="testimonial-meta"><strong>Jonah T.</strong><span class="verified">Verified buyer</span></div>
-              <p class="small">Barrier Repair Cream</p>
-              <p>★★★★★</p>
-              <p>"Premium results and faster recovery from dryness than expensive alternatives."</p>
+              <p class="small" style="margin:0">Barrier Repair Cream</p>
+              <p class="rating" style="margin:0">★★★★★</p>
+              <p style="margin:0">"Clinical results and faster barrier recovery from dryness than luxury alternatives."</p>
             </article>
           </div>
         </div>
@@ -132,27 +167,31 @@
 
       <section class="section">
         <div class="container">
-          <h2>Real Results in 14 Days</h2>
+          <div class="section-header">
+            <h2>Real Results in 14 Days</h2>
+            <p>Observed timeline for calm, hydrated, and smoothed skin texture.</p>
+          </div>
           <div class="grid grid-3 before-after-grid">
             <article class="card before-after">
               <img
                 src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80"
                 alt="Before skin progress"
+                loading="lazy"
               />
-              <div class="before-after-label">Before</div>
+              <div class="before-after-label">Day 1 (Before)</div>
             </article>
             <article class="card before-after">
               <img
                 src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
                 alt="After skin progress"
+                loading="lazy"
               />
-              <div class="before-after-label">After</div>
+              <div class="before-after-label">Day 14 (After)</div>
             </article>
-            <article class="card">
-              <h3>Visible improvement timeline</h3>
-              <p class="small">
-                Most customers report calmer texture, less visible redness, and improved hydration within
-                10-14 days of consistent use.
+            <article class="card" style="display:flex;flex-direction:column;justify-content:center">
+              <h3>Clinical Progress Timeline</h3>
+              <p class="small" style="line-height:1.6">
+                Most users observe calmer skin, reduced irritation, and improved moisture retention within 10–14 days of consistent routine adherence.
               </p>
             </article>
           </div>
@@ -160,23 +199,25 @@
       </section>
 
       <section class="section">
-        <div class="container card">
-          <h2>Build Your 3-Step Routine</h2>
-          <p class="small">
-            Start with Cleanser + Serum + SPF for mornings, then switch SPF to Night Renew Elixir at night.
+        <div class="container card" style="text-align:center;padding:var(--space-8)">
+          <h2>Build Your Custom 3-Step Routine</h2>
+          <p class="small" style="max-width:540px;margin:0 auto var(--space-4)">
+            Answer 3 quick questions about your skin type to receive a dermatologist-inspired routine prescription.
           </p>
-          <a class="btn btn-outline" href="catalog.html">Create My Routine</a>
+          <button class="btn btn-secondary" data-open-quiz>Take 30s Skin Quiz</button>
         </div>
       </section>
 
       <section class="section">
-        <div class="container newsletter inline">
-          <h2>Get 10% off + free skin guide</h2>
-          <p>Join 12,000+ members for skincare tips, product drops, and routine guides.</p>
-          <form>
-            <input type="email" placeholder="Your email address" required />
-            <button class="btn btn-dark" type="submit">Claim 10%</button>
-          </form>
+        <div class="container newsletter">
+          <div style="max-width:600px;margin:0 auto;text-align:center">
+            <h2>Get 10% off + free clinical skin guide</h2>
+            <p style="color:var(--muted);margin-bottom:var(--space-4)">Join 12,000+ members for expert skincare advice, product drops, and routine guides.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email address" required />
+              <button class="btn btn-primary" type="submit">Claim 10%</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
@@ -184,36 +225,132 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <strong>Lumora Skin</strong>
-          <p class="small">Premium minimalist skincare for modern lifestyles.</p>
-          <p class="small">support@lumoraskin.com</p>
+          <strong class="logo" style="font-size:1.25rem">Lumora Skin</strong>
+          <p class="small" style="margin:var(--space-2) 0">Clinically-inspired minimalist skincare for sensitive lifestyles.</p>
+          <p class="small font-mono">support@lumoraskin.com</p>
         </div>
-        <div>
-          <strong>Help</strong><br />
-          <a href="faq.html">FAQ</a><br />
-          <a href="shipping.html">Shipping Time</a><br />
+        <div class="footer-col">
+          <h4>Help</h4>
+          <a href="faq.html">FAQ</a>
+          <a href="shipping.html">Shipping &amp; Returns</a>
           <a href="shipping.html">Refund Policy</a>
         </div>
-        <div>
-          <strong>Company</strong><br />
-          <a href="about.html">About Us</a><br />
-          <a href="contact.html">Contact</a><br />
-          <a href="privacy.html">Privacy & Terms</a><br />
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="privacy.html">Privacy Policy</a>
           <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
         </div>
-        <div>
-          <strong>Policies</strong><br />
-          <a href="shipping.html">Shipping & Returns</a><br />
-          <a href="privacy.html">Privacy & Terms</a><br />
+        <div class="footer-col">
+          <h4>Policies</h4>
+          <a href="shipping.html">Shipping &amp; Delivery</a>
+          <a href="privacy.html">Terms of Service</a>
           <a href="checkout.html">Secure Checkout</a>
         </div>
       </div>
       <div class="container footer-trust">
-        <span>🔒 Secure checkout</span>
-        <span>↩ Easy returns</span>
-        <span>🚚 Fast dispatch</span>
+        <span>
+          <svg class="icon-ui" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Secure Checkout
+        </span>
+        <span>
+          <svg class="icon-ui" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+          30-Day Easy Returns
+        </span>
+        <span>
+          <svg class="icon-ui" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          Fast Climate-Neutral Dispatch
+        </span>
       </div>
     </footer>
+
+    <!-- Skin Quiz Modal -->
+    <div class="quiz-overlay" data-quiz-overlay>
+      <div class="quiz-modal">
+        <button class="quiz-close" aria-label="Close quiz">✕</button>
+        <div class="quiz-step-dots">
+          <div class="quiz-dot active"></div>
+          <div class="quiz-dot"></div>
+          <div class="quiz-dot"></div>
+          <div class="quiz-dot"></div>
+        </div>
+
+        <div class="quiz-step active" data-quiz-key="skintype">
+          <h2>What is your primary skin type?</h2>
+          <p class="small">This helps us prescribe the correct active textures and lipids.</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-value="oily">
+              <span>💧</span> Oily / Acne-prone
+            </button>
+            <button class="quiz-option" data-value="dry">
+              <span>🏜️</span> Dry / Dehydrated
+            </button>
+            <button class="quiz-option" data-value="combo">
+              <span>⚖️</span> Combination
+            </button>
+            <button class="quiz-option" data-value="sensitive">
+              <span>🌸</span> Sensitive / Reactive
+            </button>
+          </div>
+          <div class="quiz-nav">
+            <span></span>
+            <button class="btn btn-primary" data-quiz-next>Next Step →</button>
+          </div>
+        </div>
+
+        <div class="quiz-step" data-quiz-key="concern">
+          <h2>What is your main skin concern?</h2>
+          <p class="small">Select the condition you want to target first.</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-value="acne">
+              <span>🔴</span> Breakouts &amp; Blemishes
+            </button>
+            <button class="quiz-option" data-value="dryness">
+              <span>💨</span> Flakiness &amp; Tightness
+            </button>
+            <button class="quiz-option" data-value="redness">
+              <span>🩹</span> Redness &amp; Flushing
+            </button>
+            <button class="quiz-option" data-value="glow">
+              <span>✨</span> Dullness &amp; Uneven Tone
+            </button>
+            <button class="quiz-option" data-value="barrier-repair">
+              <span>🛡️</span> Compromised Barrier
+            </button>
+          </div>
+          <div class="quiz-nav">
+            <button class="btn btn-secondary" data-quiz-back>← Back</button>
+            <button class="btn btn-primary" data-quiz-next>Next Step →</button>
+          </div>
+        </div>
+
+        <div class="quiz-step" data-quiz-key="goal">
+          <h2>What is your primary goal?</h2>
+          <p class="small">We will tailor your 3-step recommendation accordingly.</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-value="glow">
+              <span>🌟</span> Visible Radiant Glow
+            </button>
+            <button class="quiz-option" data-value="repair">
+              <span>🔧</span> Strengthen Barrier &amp; Resilience
+            </button>
+            <button class="quiz-option" data-value="calm">
+              <span>🧘</span> Soothe Reactivity &amp; Redness
+            </button>
+            <button class="quiz-option" data-value="hydrate">
+              <span>💦</span> Plump Deep Hydration
+            </button>
+          </div>
+          <div class="quiz-nav">
+            <button class="btn btn-secondary" data-quiz-back>← Back</button>
+            <button class="btn btn-primary" data-quiz-next>See Prescription ✨</button>
+          </div>
+        </div>
+
+        <div class="quiz-step quiz-results" data-quiz-results></div>
+      </div>
+    </div>
 
     <script src="assets/products.js"></script>
     <script src="assets/app.js"></script>

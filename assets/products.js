@@ -1,23 +1,47 @@
+const INGREDIENT_DETAILS = {
+  "Ceramides": "Strengthens the skin barrier and prevents moisture loss.",
+  "Glycerin": "A natural humectant that draws deep moisture into skin.",
+  "Green tea extract": "Rich in antioxidants to soothe irritation and redness.",
+  "Vitamin C": "Stabilized antioxidant that brightens tone and boosts radiance.",
+  "Niacinamide": "Reduces inflammation, regulates oil, and refines pores.",
+  "Licorice root": "Calms redness and helps fade dark spots.",
+  "Squalane": "Lightweight plant oil that mimics skin's natural moisture.",
+  "Panthenol": "Pro-Vitamin B5 that speeds barrier repair and calms skin.",
+  "Centella asiatica": "Clinical botanical that heals compromised skin barriers.",
+  "Bakuchiol": "Gentle plant alternative to retinol that smooths fine lines.",
+  "Peptides": "Amino acid chains that support collagen and skin firmness.",
+  "Hyaluronic acid": "Binds up to 1,000x its weight in water for plump hydration.",
+  "Zinc oxide": "Mineral sun shield providing broad-spectrum UV protection.",
+  "Vitamin E": "Nourishing antioxidant that protects against environmental stress.",
+  "Aloe vera": "Instantly cools and hydrates stressed, sensitive skin.",
+  "Allantoin": "Soothes skin reactivity and smooths rough texture.",
+  "Beta-glucan": "Deeply hydrating oat derivative that reduces redness."
+};
+
 const PRODUCTS = [
   {
     id: "glow-cleanser",
     name: "Glow Balance Cleanser",
+    sku: "LUM-CLN-01",
     price: 24,
     compareAt: 32,
     category: "Cleanser",
     image: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80",
     description:
       "A gentle daily cleanser that removes buildup, keeps skin calm, and supports a healthy barrier.",
-    benefits: ["Hydrating", "pH balanced", "Suitable for sensitive skin"],
+    benefits: ["Hydrating", "pH balanced 5.5", "Suitable for sensitive skin"],
     ingredients: ["Ceramides", "Glycerin", "Green tea extract"],
+    activesPct: "2% Ceramides + 5% Glycerin",
     use: "Massage on damp skin for 45 seconds, morning and evening.",
     rating: 4.8,
     reviews: 182,
-    badge: "Best Seller"
+    badge: "Best Seller",
+    concerns: ["acne", "glow", "barrier-repair"]
   },
   {
     id: "vitamin-c-serum",
     name: "Radiance C Serum",
+    sku: "LUM-SRM-02",
     price: 34,
     compareAt: 45,
     category: "Serum",
@@ -26,14 +50,17 @@ const PRODUCTS = [
       "A brightening serum with stabilized vitamin C for improved tone and visible glow.",
     benefits: ["Brightening", "Evens skin tone", "Lightweight finish"],
     ingredients: ["Vitamin C", "Niacinamide", "Licorice root"],
+    activesPct: "10% Stabilized Vit C + 2% Niacinamide",
     use: "Apply 2-3 drops after cleansing, then follow with moisturizer.",
     rating: 4.7,
     reviews: 139,
-    badge: "New"
+    badge: "New",
+    concerns: ["glow", "acne", "redness"]
   },
   {
     id: "repair-moisturizer",
     name: "Barrier Repair Cream",
+    sku: "LUM-MST-03",
     price: 29,
     compareAt: 38,
     category: "Moisturizer",
@@ -42,14 +69,17 @@ const PRODUCTS = [
       "A rich but breathable moisturizer designed to lock in hydration and smooth texture.",
     benefits: ["Deep hydration", "Barrier support", "Fragrance free"],
     ingredients: ["Squalane", "Panthenol", "Centella asiatica"],
+    activesPct: "3% Squalane + 2% Panthenol",
     use: "Use as final step of routine to seal hydration and calm skin.",
     rating: 4.9,
     reviews: 214,
-    badge: "Top Rated"
+    badge: "Top Rated",
+    concerns: ["dryness", "barrier-repair", "redness"]
   },
   {
     id: "night-renew",
     name: "Night Renew Elixir",
+    sku: "LUM-TRT-04",
     price: 39,
     compareAt: 52,
     category: "Treatment",
@@ -58,41 +88,49 @@ const PRODUCTS = [
       "A nighttime treatment that helps skin look firmer, smoother, and refreshed by morning.",
     benefits: ["Overnight recovery", "Smooths texture", "Boosts firmness look"],
     ingredients: ["Bakuchiol", "Peptides", "Hyaluronic acid"],
+    activesPct: "1% Bakuchiol + Multi-Peptides",
     use: "Apply 1 pump at night after serum and before moisturizer.",
     rating: 4.7,
     reviews: 118,
-    badge: "Limited"
+    badge: "Limited",
+    concerns: ["glow", "dryness", "barrier-repair"]
   },
   {
     id: "daily-spf",
     name: "Daily Shield SPF 50",
+    sku: "LUM-SPF-05",
     price: 27,
     compareAt: 35,
     category: "Sunscreen",
-    image: "https://images.unsplash.com/photo-1598662972299-5408ddb8a3dc?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=80",
     description:
       "Invisible broad-spectrum sunscreen that layers well under makeup and protects without white cast.",
-    benefits: ["SPF 50", "No white cast", "Non-greasy"],
+    benefits: ["SPF 50 PA++++", "No white cast", "Non-greasy finish"],
     ingredients: ["Zinc oxide", "Niacinamide", "Vitamin E"],
+    activesPct: "12% Mineral Zinc + 2% Niacinamide",
     use: "Use two-finger amount as final morning step and reapply every 2-3 hours.",
     rating: 4.8,
     reviews: 167,
-    badge: "Editor Pick"
+    badge: "Editor Pick",
+    concerns: ["acne", "redness", "glow"]
   },
   {
     id: "calm-mist",
     name: "Calm Restore Mist",
+    sku: "LUM-TNR-06",
     price: 21,
     compareAt: 28,
     category: "Toner",
-    image: "https://images.unsplash.com/photo-1607603750909-40847b80376f?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=900&q=80",
     description:
       "A quick hydrating mist that relieves visible redness and preps skin for actives.",
     benefits: ["Instant hydration", "Soothes redness look", "Alcohol free"],
     ingredients: ["Aloe vera", "Allantoin", "Beta-glucan"],
+    activesPct: "95% Organic Aloe + 1% Beta-Glucan",
     use: "Mist 2-4 pumps after cleansing or anytime skin feels stressed.",
     rating: 4.6,
     reviews: 91,
-    badge: "Sensitive Favorite"
+    badge: "Sensitive Favorite",
+    concerns: ["redness", "dryness", "barrier-repair"]
   }
 ];

@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product | Lumora Skin</title>
+    <title>Formula Detail | Lumora Skin</title>
+    <meta name="description" content="View clinical active percentages, ingredient breakdowns, and usage instructions for Lumora Skin formulas." />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
@@ -11,49 +12,73 @@
     <header class="site-header">
       <nav class="container nav">
         <a class="logo" href="index.html">Lumora Skin</a>
+        <button class="hamburger" data-hamburger aria-label="Toggle menu">☰</button>
         <div class="menu">
           <a href="catalog.html">Catalog</a>
+          <a href="about.html">About</a>
           <a href="shipping.html">Shipping</a>
-          <a class="icon-link" href="catalog.html" aria-label="Search">⌕</a>
-          <a class="icon-link" href="contact.html" aria-label="Account">◌</a>
-          <a href="cart.html">Cart: <b data-cart-count>0</b></a>
+          <a class="nav-icon-link" href="catalog.html" aria-label="Search Catalog">
+            <svg class="icon-ui" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Search
+          </a>
+          <a class="nav-icon-link" href="contact.html" aria-label="Skin Consultation">
+            <svg class="icon-ui" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Consult
+          </a>
+          <a class="nav-icon-link" href="cart.html" aria-label="View Cart" style="white-space:nowrap">
+            <svg class="icon-ui" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Cart (<span data-cart-count class="font-mono">0</span>)
+          </a>
         </div>
       </nav>
     </header>
 
-    <main class="detail-wrap container" data-product-detail></main>
+    <main class="detail-wrap container">
+      <div data-product-detail></div>
+      <div class="cross-sell-section" data-pdp-cross-sell></div>
+      <div class="recently-viewed-strip" data-recently-viewed></div>
+    </main>
 
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <strong>Lumora Skin</strong>
-          <p class="small">Premium minimalist skincare for modern lifestyles.</p>
-          <p class="small">support@lumoraskin.com</p>
+          <strong class="logo" style="font-size:1.25rem">Lumora Skin</strong>
+          <p class="small" style="margin:var(--space-2) 0">Clinically-inspired minimalist skincare for sensitive lifestyles.</p>
+          <p class="small font-mono">support@lumoraskin.com</p>
         </div>
-        <div>
-          <strong>Help</strong><br />
-          <a href="faq.html">FAQ</a><br />
-          <a href="shipping.html">Shipping Time</a><br />
+        <div class="footer-col">
+          <h4>Help</h4>
+          <a href="faq.html">FAQ</a>
+          <a href="shipping.html">Shipping &amp; Returns</a>
           <a href="shipping.html">Refund Policy</a>
         </div>
-        <div>
-          <strong>Company</strong><br />
-          <a href="about.html">About Us</a><br />
-          <a href="contact.html">Contact</a><br />
-          <a href="privacy.html">Privacy & Terms</a><br />
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="privacy.html">Privacy Policy</a>
           <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
         </div>
-        <div>
-          <strong>Policies</strong><br />
-          <a href="shipping.html">Shipping & Returns</a><br />
-          <a href="privacy.html">Privacy & Terms</a><br />
+        <div class="footer-col">
+          <h4>Policies</h4>
+          <a href="shipping.html">Shipping &amp; Delivery</a>
+          <a href="privacy.html">Terms of Service</a>
           <a href="checkout.html">Secure Checkout</a>
         </div>
       </div>
       <div class="container footer-trust">
-        <span>🔒 Secure checkout</span>
-        <span>↩ Easy returns</span>
-        <span>🚚 Fast dispatch</span>
+        <span>
+          <svg class="icon-ui" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Secure Checkout
+        </span>
+        <span>
+          <svg class="icon-ui" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+          30-Day Easy Returns
+        </span>
+        <span>
+          <svg class="icon-ui" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          Fast Climate-Neutral Dispatch
+        </span>
       </div>
     </footer>
 
